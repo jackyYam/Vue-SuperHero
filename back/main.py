@@ -49,6 +49,11 @@ async def websocket_endpoint(websocket: WebSocket):
                     if response.status_code == 200:
                         hero_data = response.json()
                         powerstats = hero_data.get("powerstats", {})
+                        for stat, value in powerstats.items():
+                            if value == "null":
+                                powerstats[stat] = random.randint(0, 50)
+                            else:
+                                powerstats[stat] = int(value)
                         powerstats["AS"] = random.randint(0, 10)
                         heroes.append(
                             {

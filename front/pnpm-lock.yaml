@@ -29,6 +29,15 @@ dependencies:
   vue:
     specifier: ^3.4.37
     version: 3.5.10(typescript@5.6.2)
+  vue-router:
+    specifier: '4'
+    version: 4.4.5(vue@3.5.10)
+  vue-zustand:
+    specifier: ^0.6.0
+    version: 0.6.0(vue@3.5.10)(zustand@5.0.0-rc.2)
+  zustand:
+    specifier: 5.0.0-rc.2
+    version: 5.0.0-rc.2
 
 devDependencies:
   '@types/node':
@@ -619,6 +628,10 @@ packages:
       de-indent: 1.0.2
       he: 1.2.0
     dev: true
+
+  /@vue/devtools-api@6.6.4:
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
+    dev: false
 
   /@vue/language-core@2.1.6(typescript@5.6.2):
     resolution: {integrity: sha512-MW569cSky9R/ooKMh6xa2g1D0AtRKbL56k83dzus/bx//RDJk24RHWkMzbAlXjMdDNyxAaagKPRquBIxkxlCkg==}
@@ -1592,6 +1605,15 @@ packages:
       vue: 3.5.10(typescript@5.6.2)
     dev: false
 
+  /vue-router@4.4.5(vue@3.5.10):
+    resolution: {integrity: sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.10(typescript@5.6.2)
+    dev: false
+
   /vue-tsc@2.1.6(typescript@5.6.2):
     resolution: {integrity: sha512-f98dyZp5FOukcYmbFpuSCJ4Z0vHSOSmxGttZJCsFeX0M4w/Rsq0s4uKXjcSRsZqsRgQa6z7SfuO+y0HVICE57Q==}
     hasBin: true
@@ -1603,6 +1625,19 @@ packages:
       semver: 7.6.3
       typescript: 5.6.2
     dev: true
+
+  /vue-zustand@0.6.0(vue@3.5.10)(zustand@5.0.0-rc.2):
+    resolution: {integrity: sha512-injGg2Nxcq7RBXe4n92LmIOcAP3DxqHr3w5uVhkV1BnCIChjztXfsWEX9k8IP3zb7EmHnDV5SW0XtxY6TQct2Q==}
+    peerDependencies:
+      vue: '>=3.2.0'
+      zustand: '>=4.3.0'
+    dependencies:
+      '@vueuse/core': 10.11.1(vue@3.5.10)
+      vue: 3.5.10(typescript@5.6.2)
+      zustand: 5.0.0-rc.2
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   /vue@3.5.10(typescript@5.6.2):
     resolution: {integrity: sha512-Vy2kmJwHPlouC/tSnIgXVg03SG+9wSqT1xu1Vehc+ChsXsRd7jLkKgMltVEFOzUdBr3uFwBCG+41LJtfAcBRng==}
@@ -1646,3 +1681,22 @@ packages:
     resolution: {integrity: sha512-bLQOjaX/ADgQ20isPJRvF0iRUHIxVhYvr53Of7wGcWlO2jvtUlH5m87DsmulFVxRpNLOnI4tB6p/oh8D7kpn9Q==}
     engines: {node: '>= 14'}
     hasBin: true
+
+  /zustand@5.0.0-rc.2:
+    resolution: {integrity: sha512-o2Nwuvnk8vQBX7CcHL8WfFkZNJdxB/VKeWw0tNglw8p4cypsZ3tRT7rTRTDNeUPFS0qaMBRSKe+fVwL5xpcE3A==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+    dev: false

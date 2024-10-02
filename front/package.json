@@ -16,7 +16,10 @@
     "radix-vue": "^1.9.6",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "vue-router": "4",
+    "vue-zustand": "^0.6.0",
+    "zustand": "5.0.0-rc.2"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
